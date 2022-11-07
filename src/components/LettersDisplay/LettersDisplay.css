@@ -1,0 +1,37 @@
+.letters {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 30px;
+    margin-top: -75px;
+}
+
+.letter {
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.letter.lost {
+    color: red;
+}
+
+.letter.won {
+    color: green;
+}
+
+.letter.last {
+    color: #38c22b;
+}
+
+@media screen and (max-width: 576px) {
+    .letters {
+        margin-top: -50px;
+        gap: 0.75rem;
+    }
+    .letter {
+        font-size: 16px;
+    }
+}

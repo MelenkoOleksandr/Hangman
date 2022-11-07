@@ -1,0 +1,49 @@
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 0.5rem;
+    max-width: 600px;
+    min-width: 280px;
+}
+
+.keyboard-button {
+    position: relative;
+    width: 100%;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    background-color: #f1f1f1;
+}
+
+.keyboard-button[disabled] {
+    cursor: default;
+}
+
+.keyboard-button:hover {
+    background-color: #e1e1e1;
+}
+
+.keyboard-button.guessed::after {
+    content: "✓";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #38c22b;
+}
+
+.keyboard-button.guessed.wrong::after {
+    content: "X";
+    background-color: #e81010;
+}
